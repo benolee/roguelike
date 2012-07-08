@@ -16,10 +16,10 @@ class Main extends JFrame with KeyListener {
   addKeyListener(this)
   repaint
 
-  override def repaint() {
+  override def repaint {
     terminal.clear
     screen.displayOutput(terminal)
-    super.repaint
+    super.repaint()
   }
 
   def keyPressed(e: KeyEvent) {
@@ -27,8 +27,8 @@ class Main extends JFrame with KeyListener {
     repaint
   }
 
-  def keyReleased(e: KeyEvent)
-  def keyTyped(e: KeyEvent)
+  def keyReleased(e: KeyEvent) {}
+  def keyTyped(e: KeyEvent) {}
 }
 
 object Main {
